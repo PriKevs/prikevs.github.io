@@ -1,8 +1,8 @@
 menu:
-    博客: /
-    归档: /archives/
-    微博: http://weibo.com/sunchongsheng
-    github: https://github.com/pinggod
+    Blog: /
+    Archives: /archives/
+    Email: sendto:prikevs@gmail.com
+    github: https://github.com/prikevs
     rss: /atom.xml
 
 favicon: /favicon.png
@@ -15,9 +15,9 @@ duoshuo:
 
 # Analytics
 # google-analytics:
-ga: UA-65933410-1
+ga: UA-72789490-1
 # baidu-analytics:
-ba: //hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2
+ba: 
 
 # Copyright Infomation
 startyear: 2015
