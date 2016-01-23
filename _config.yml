@@ -68,4 +68,7 @@ theme: apollo
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/prikevs/prikevs.github.io
+  branch: master
+
