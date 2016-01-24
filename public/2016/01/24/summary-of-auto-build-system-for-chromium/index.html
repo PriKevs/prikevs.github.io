@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Auto Build System for Chromium · Kevince's Blog</title><meta name="description" content="Auto Build System for Chromium - Kevince Boole"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVES</a></li><li class="nav-list-item"><a href="sendto:prikevs@gmail.com" target="_self" class="nav-list-link">EMAIL</a></li><li class="nav-list-item"><a href="https://github.com/prikevs" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Auto Build System for Chromium</h1><div class="post-meta"><div class="post-time">Jan 24, 2016</div></div><div class="post-content"><p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。</p>
+<h2 id="u9700_u6C42"><a href="#u9700_u6C42" class="headerlink" title="需求"></a>需求</h2><p>按照最初的需求，新平台包含以下功能:</p>
+<ul>
+<li>Auto fetch and build Chromium project at regular time.</li>
+<li>Build commits according to demand.</li>
+<li>Quick query to a commit and download built binaries.</li>
+</ul>
+<p>后来经过我提议，决定搭建一个<strong>分布式编译集群</strong>，采用Master-Slave结构，将组里淘汰下来的旧电脑充分利用，作为build worker加入Machine pool。</p>
+<h2 id="u8BBE_u8BA1"><a href="#u8BBE_u8BA1" class="headerlink" title="设计"></a>设计</h2><p>系统主要分成四个模块：<strong>Master</strong>, <strong>Collector</strong>, <strong>Database</strong>, <strong>Worker</strong></p>
+<p>其中的<strong>Master</strong>，<strong>Collector</strong>，<strong>Database</strong>相当于Master-Slave结构中的Master，而Worker就是Slave,<br>结构关系如下图所示：</p>
+<p>TBD</p>
+<ul>
+<li><p><strong>Master</strong><br>通过消息队列与Worker进行交互，提供数据库管理、添加build任务等操作的API。提供Admin Site给用户进行基于Web的可视化管理。</p>
+<ul>
+<li>Admin Site: 给用户提供可视化的管理界面</li>
+<li>Database API: 封装SQLAlchemy给其他功能提供数据库操作API</li>
+<li>Database Keeper: 监听消息队列中的任务状态更新以及查询信息</li>
+<li>Scheduler: 定期更新代码库并将新的代码库信息同步进数据库，同时将需要build的commit加入task队列。</li>
+</ul>
+</li>
+<li><p><strong>Collector</strong><br>独立于Master，负责通过HTTP接收Worker build结束之后提交的log和binaries，通过Web提供查询以及下载的API。</p>
+</li>
+<li><p><strong>Database</strong><br>用于存储代码库的Commit以及Branch信息，Task的build情况等，驱动Master。</p>
+</li>
+<li><p><strong>Worker</strong><br>每个Worker维护一个Chromium的code base，通过消息队列获取build task，包括需要build的commit的commit hash或者version No.。<br>Build的过程中通过消息队列更新当前任务的完成进度以及自身状态。Build结束后将Binaries和Log打包，通过HTTP上传给Collector，并接受下一个任务。</p>
+</li>
+</ul>
+<p>任务分发流程：</p>
+<ul>
+<li>添加任务：</li>
+</ul>
+<p>TBD</p>
+<h2 id="u5B9E_u73B0"><a href="#u5B9E_u73B0" class="headerlink" title="实现"></a>实现</h2><p>技术栈：</p>
+<ul>
+<li>语言：Python3.4(后端)，HTML,CSS,JS(Admin Site前端)</li>
+<li>Web框架：<a href="http://flask.pocoo.org/" target="_blank" rel="external">Flask</a></li>
+<li>ORM工具：<a href="http://www.sqlalchemy.org/" target="_blank" rel="external">SQLAlchemy</a></li>
+<li>消息队列：<a href="http://www.rabbitmq.com/" target="_blank" rel="external">RabbitMQ</a></li>
+<li>数据库：<a href="https://mariadb.org/" target="_blank" rel="external">MariaDB</a></li>
+</ul>
+<h2 id="u62D3_u5C55"><a href="#u62D3_u5C55" class="headerlink" title="拓展"></a>拓展</h2><ul>
+<li>增加邮件提醒功能，使用SMTPLib</li>
+<li>使用Docker快速自动化部署Worker</li>
+</ul>
+<h2 id="u603B_u7ED3_26amp_3B_u611F_u60F3"><a href="#u603B_u7ED3_26amp_3B_u611F_u60F3" class="headerlink" title="总结&amp;感想"></a>总结&amp;感想</h2><p>根据需求，从设计到开发全都是一人完成，很好地锻炼了我系统模块化设计的能力。“全栈”式的开发也让我对整个系统流程有了更深的理解，为接以后的项目和工作打下了坚实基础。<br>技术发展与迭代的速度很快，不能只拘泥于工具的使用，要深入理解其背后的设计逻辑，才能应得万变。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/16/remote-control-based-on-websocket/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2016 <a href="http://yoursite.com">Kevince Boole</a>, unless otherwise noted.</p></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-72789490-1",'auto');ga('send','pageview');</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
