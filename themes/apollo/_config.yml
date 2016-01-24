@@ -1,7 +1,7 @@
 menu:
     Blog: /
     Archives: /archives/
-    Email: sendto:prikevs@gmail.com
+    Email: mailto:prikevs@gmail.com
     github: https://github.com/prikevs
     rss: /atom.xml
 
