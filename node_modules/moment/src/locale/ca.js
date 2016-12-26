@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : Catalan [ca]
+//! locale : catalan (ca)
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 import moment from '../moment';
@@ -39,7 +39,7 @@ export default moment.defineLocale('ca', {
         sameElse : 'L'
     },
     relativeTime : {
-        future : 'd\'aquí %s',
+        future : 'en %s',
         past : 'fa %s',
         s : 'uns segons',
         m : 'un minut',

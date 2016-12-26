@@ -1,5 +1,6 @@
 ---
 title: Auto Build System for Chromium
+date: 2016-12-26
 ---
 
 新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。
