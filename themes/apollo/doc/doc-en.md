@@ -1,4 +1,4 @@
-![hexo-theme-apollo](https://cloud.githubusercontent.com/assets/9530963/11295742/8f3d451a-8fa8-11e5-90d2-397af60a992d.png)
+![hexo-theme-apollo](https://cloud.githubusercontent.com/assets/9530963/13026956/08e76eca-d277-11e5-8bfc-2e80cea20a0d.png)
 
 ## Install
 
@@ -6,7 +6,7 @@
 hexo init Blog 
 cd Blog 
 npm install
-npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync
+npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive
 git clone https://github.com/pinggod/hexo-theme-apollo.git themes/apollo
 ```
 
@@ -16,6 +16,13 @@ Go to `_config.yml` and change the `theme` property to `apollo` value:
 
 ```yaml
 theme: apollo
+
+# Show all posts in archive page using hexo-generator-archive
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
 ```
 
 ## Update
@@ -53,6 +60,12 @@ In fact, Hexo-theme-apollo only supoort two kinds of titles: h1~h3 belongs to wh
 Why i do this? I support that an article should be short and clean, dont let visitors spend much time to recognise the blog post structure.
 
 Another reason is that: i don't have met a great styles to distinguish between different kinds of headers.If you have gread idea about it, please let me know.
+
+## post excerpt
+
+If you want to show excerpt(core content of article) to your visitors, do add HTML comment tag `<!--more-->` before else content，and finally the tag will be parsed to be a variable which represents post excerpt by Hexo:
+
+![https://cloud.githubusercontent.com/assets/9530963/14064341/0fa3c754-f432-11e5-8ad7-5d063d4a0886.png](https://cloud.githubusercontent.com/assets/9530963/14064341/0fa3c754-f432-11e5-8ad7-5d063d4a0886.png)
 
 ## Comment Plugin
 
