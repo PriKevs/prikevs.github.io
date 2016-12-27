@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-26T10:44:34.000Z</updated>
+  <updated>2016-12-27T06:11:37.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2016/12/26/add-authentication-to-ngrok/"/>
     <id>http://yoursite.com/2016/12/26/add-authentication-to-ngrok/</id>
     <published>2016-12-25T16:00:00.000Z</published>
-    <updated>2016-12-26T10:44:34.000Z</updated>
+    <updated>2016-12-27T06:11:37.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>最近有个同学需要在校外访问学校内网，然而学校的SSL VPN出了问题，只能用自己的方式来解决了。<br>听到这个需求，我的第一反应是用N2N VPN，使用UDP Hole Punching的方式来穿透学校内网组建VPN。<br>于是立马写了一套简单的工具来检测学校的网络是否支持UPD Hole Punching，不过这不是今天的主题，以后有机会再说。</p>
+    <content type="html"><![CDATA[<p>最近有个同学需要在校外访问学校内网，然而学校的SSL VPN出了问题，只能用自己的方式来解决了……<br><a id="more"></a></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>最近有个同学需要在校外访问学校内网，然而学校的SSL VPN出了问题，只能用自己的方式来解决了。<br>听到这个需求，我的第一反应是用N2N VPN，使用UDP Hole Punching的方式来穿透学校内网组建VPN。<br>于是立马写了一套简单的工具来检测学校的网络是否支持UPD Hole Punching，不过这不是今天的主题，以后有机会再说。</p>
 <p>由于N2N年久失修，对Mac用户也不友好，我最终使用来一个更简单的方式——在内网本地搭一个shadowsoks的server，然后用ngrok将端口暴露到外网服务器，直接用ss的客户端就可以将流量转接到本地了。</p>
 <p>首先我简单介绍一下ngrok:</p>
 <blockquote>
@@ -48,7 +49,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;最近有个同学需要在校外访问学校内网，然而学校的SSL VPN出了问题，只能用自己的方式来解决了。&lt;br&gt;听到这个需求，我的第一反应是用N2N
+      &lt;p&gt;最近有个同学需要在校外访问学校内网，然而学校的SSL VPN出了问题，只能用自己的方式来解决了……&lt;br&gt;
     
     </summary>
     
@@ -64,9 +65,11 @@
     <link href="http://yoursite.com/2016/01/24/auto-build-system-for-chromium/"/>
     <id>http://yoursite.com/2016/01/24/auto-build-system-for-chromium/</id>
     <published>2016-01-23T16:00:00.000Z</published>
-    <updated>2016-12-26T11:03:37.000Z</updated>
+    <updated>2016-12-27T06:11:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。</p>
+    <content type="html"><![CDATA[<p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台……</p>
+<a id="more"></a>
+<p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。</p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>按照最初的需求，新平台包含以下功能:</p>
 <ul>
 <li>Auto fetch and build Chromium project at regular time.</li>
@@ -115,8 +118,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。&lt;br&gt;实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。&lt;/p&gt;
-&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; 
+      &lt;p&gt;新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。&lt;br&gt;实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台……&lt;/p&gt;
     
     </summary>
     
@@ -128,9 +130,11 @@
     <link href="http://yoursite.com/2015/12/16/remote-control-based-on-websocket/"/>
     <id>http://yoursite.com/2015/12/16/remote-control-based-on-websocket/</id>
     <published>2015-12-15T16:00:00.000Z</published>
-    <updated>2016-12-26T10:44:34.000Z</updated>
+    <updated>2016-12-27T06:10:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停。</p>
+    <content type="html"><![CDATA[<p>前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停……</p>
+<a id="more"></a>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>由于播放器是基于Web的且我没有开发手机app的条件，于是便准备从Web着手，首选的通信方式当然是WebSocket。实现的方法是写一个Chrome的小插件，用来在网页中注入JS代码，而这段JS的功能就是与中继服务器建立WebSocket连接，并通过解析接收到的指令对网页上的元素进行对应的操作，比如click暂停/播放、下一首、上一首等按钮。</p>
 <p>有一个比较关键的地方就是中继服务器实现的对于WebSocket发送内容的中继。我采用了Gorilla的WebSocket库，并在其examples/chat上进行的修改，加入了Channel的功能，即只要连上同样的URL就是加入同一个频道，来实现中继通信。<br>于是最终的流程就是：</p>
 <ol>
@@ -146,7 +150,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，
+      &lt;p&gt;前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停……&lt;/p&gt;
     
     </summary>
     
