@@ -2,6 +2,10 @@
 title: Auto Build System for Chromium
 date: 2016-1-24
 ---
+新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。
+实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台……
+
+<!-- more -->
 
 新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。
 实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。
