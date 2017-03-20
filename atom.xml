@@ -65,11 +65,10 @@
     <link href="http://yoursite.com/2016/01/24/auto-build-system-for-chromium/"/>
     <id>http://yoursite.com/2016/01/24/auto-build-system-for-chromium/</id>
     <published>2016-01-23T16:00:00.000Z</published>
-    <updated>2016-12-27T06:11:50.000Z</updated>
+    <updated>2017-03-20T07:12:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台……</p>
 <a id="more"></a>
-<p>新学期刚开始没多久便拿到了Intel上海的实习Offer，于是选择了翘课实习，至今已经三多月了。<br>实习第一个阶段的任务便是开发一个针对Chromium的自动化编译平台。</p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>按照最初的需求，新平台包含以下功能:</p>
 <ul>
 <li>Auto fetch and build Chromium project at regular time.</li>
@@ -130,11 +129,10 @@
     <link href="http://yoursite.com/2015/12/16/remote-control-based-on-websocket/"/>
     <id>http://yoursite.com/2015/12/16/remote-control-based-on-websocket/</id>
     <published>2015-12-15T16:00:00.000Z</published>
-    <updated>2016-12-27T06:10:18.000Z</updated>
+    <updated>2017-03-20T07:13:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停……</p>
 <a id="more"></a>
-<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>前段时间有一个小需求，场景是装着Ubuntu的笔记本放在书桌上连着音箱用网页版的网易云音乐放歌，每次睡觉前我都要从床上爬起来去手动暂停播放，十分影响舒适度。于是便希望有种方法能够通过手机远程控制播放器的暂停。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>由于播放器是基于Web的且我没有开发手机app的条件，于是便准备从Web着手，首选的通信方式当然是WebSocket。实现的方法是写一个Chrome的小插件，用来在网页中注入JS代码，而这段JS的功能就是与中继服务器建立WebSocket连接，并通过解析接收到的指令对网页上的元素进行对应的操作，比如click暂停/播放、下一首、上一首等按钮。</p>
 <p>有一个比较关键的地方就是中继服务器实现的对于WebSocket发送内容的中继。我采用了Gorilla的WebSocket库，并在其examples/chat上进行的修改，加入了Channel的功能，即只要连上同样的URL就是加入同一个频道，来实现中继通信。<br>于是最终的流程就是：</p>
 <ol>

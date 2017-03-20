@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/12/16/remote-control-based-on-websocket/</loc>
+    
+    <lastmod>2017-03-20T07:13:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/01/24/auto-build-system-for-chromium/</loc>
     
-    <lastmod>2016-12-27T06:11:50.000Z</lastmod>
+    <lastmod>2017-03-20T07:12:39.000Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2016/12/26/add-authentication-to-ngrok/</loc>
     
     <lastmod>2016-12-27T06:11:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/12/16/remote-control-based-on-websocket/</loc>
-    
-    <lastmod>2016-12-27T06:10:18.000Z</lastmod>
     
   </url>
   
